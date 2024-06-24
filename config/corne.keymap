@@ -9,10 +9,10 @@
 #include <dt-bindings/zmk/keys.h>
 
 
-&led_strip {
+/*&led_strip {
     chain-length = <27>;
 };
-
+*/
 / {
     combos {
         compatible = "zmk,combos";
