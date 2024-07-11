@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-<<<<<<< HEAD
 #define DEF 0
 #define NAV 1
 #define SYM 2
@@ -11,12 +10,6 @@
 
 
 
-=======
-/*&led_strip {
-    chain-length = <27>;
-};
-*/
->>>>>>> 907987d6733b728e11c68bdea64e652fe7be2e44
 
 / {
     behaviors {
