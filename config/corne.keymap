@@ -173,6 +173,7 @@
         compatible = "zmk,keymap";
 
         DEF {
+                display-name = "Base";
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
             // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
@@ -188,6 +189,7 @@
         };
 
         NAV {
+            display-name = "Nav";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -203,6 +205,7 @@
         };
 
         SYM {
+                display-name = "Sym";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -218,6 +221,7 @@
         };
 
         ADJ {
+                display-name = "System";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
 &trans  &kp F11       &kp F12       &trans        &trans      &trans            &trans  &trans  &trans  &trans  &trans       &trans
