@@ -59,14 +59,15 @@
         browsertab: browsertab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
     };
-
 
     combos {
         compatible = "zmk,combos";
@@ -173,7 +174,8 @@
         compatible = "zmk,keymap";
 
         DEF {
-                display-name = "Base";
+            display-name = "Base";
+
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
             // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
@@ -190,6 +192,7 @@
 
         NAV {
             display-name = "Nav";
+
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -197,15 +200,16 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp N1  &kp N7    &kp N8        &kp N9           &kp N5           &kp N6   &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans    &kp UP_ARROW  &browsertab           &kp PAGE_UP      &kp N0   &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans  &trans
+&trans  &kp N1  &kp N7    &kp N8        &kp N9           &kp N5           &kp N6           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp N0  &trans
+&trans  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+                          &kp LGUI      &trans           &kp SPACE        &kp RET          &trans           &trans
             >;
         };
 
         SYM {
-                display-name = "Sym";
+            display-name = "Sym";
+
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -221,7 +225,7 @@
         };
 
         ADJ {
-                display-name = "System";
+            display-name = "System";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
 &trans  &kp F11       &kp F12       &trans        &trans      &trans            &trans  &trans  &trans  &trans  &trans       &trans
