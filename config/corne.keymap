@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <locale/keys_sv.h>
 
 #define DEF 0
 #define NAV 1
@@ -197,10 +198,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 TAB  &kp RIGHT_ALT
+&kp TAB    &kp SV_Q  &kp SV_W  &kp SV_E     &kp SV_R  &kp SV_T        &kp SV_Y    &kp SV_U      &kp SV_I          &kp SV_O    &kp SV_P         &kp SV_A_RING
+&kp LSHFT  &kp SV_A  &kp SV_S  &kp SV_D     &kp SV_F  &kp SV_G        &kp SV_H    &kp SV_J      &kp SV_K          &kp SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
+&kp LCTRL  &kp SV_Z  &kp SV_X  &kp SV_C     &kp SV_V  &kp SV_B        &kp SV_N    &kp SV_M      &kp SV_COMMA      &kp SV_DOT  &kp SV_MINUS     &kp RSHFT
+                         &kp LGUI  &mo 1  &kp SV_SPACE    &kp RET  &lt 2 TAB  &kp RIGHT_ALT
             >;
         };
 
@@ -214,9 +215,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp N1  &kp N2    &kp N3       &kp N4           &kp N5           &kp N6   &kp N7        &kp N8        &kp N9        &kp N0  &trans
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp N0   &kp N4  &kp N5        &kp N6  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &kp SV_N1  &kp SV_N2    &kp SV_N3       &kp SV_N4           &kp SV_N5           &kp SV_N6   &kp SV_N7        &kp SV_N8        &kp SV_N9        &kp SV_N0  &kp BACKSPACE
+&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp SV_N0   &kp SV_N4  &kp SV_N5        &kp SV_N6  &kp SV_SEMI   &kp SV_COMMA
+&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp SV_N1  &kp SV_N2  &kp SV_N3  &trans  &trans
                           &kp LGUI      &trans           &kp SPACE        &kp RET  &trans        &trans
             >;
         };
