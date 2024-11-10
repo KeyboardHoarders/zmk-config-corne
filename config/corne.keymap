@@ -1,6 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
+
 #include "keys_sv.h"
 
 #define DEF 0
@@ -98,32 +100,32 @@
         };
 
         perc {
-            bindings = <&kp PERCENT>;
+            bindings = <&kp SV_PERCENT>;
             key-positions = <5 17>;
         };
 
         equal {
-            bindings = <&kp EQUAL>;
+            bindings = <&kp SV_EQUAL>;
             key-positions = <28 16>;
         };
 
         dollar {
-            bindings = <&kp DOLLAR>;
+            bindings = <&kp SV_DOLLAR>;
             key-positions = <4 16>;
         };
 
         pound {
-            bindings = <&kp POUND>;
+            bindings = <&kp SV_POUND>;
             key-positions = <3 15>;
         };
 
         at {
-            bindings = <&kp AT>;
+            bindings = <&kp SV_AT>;
             key-positions = <2 14>;
         };
 
         backslash {
-            bindings = <&kp BACKSLASH>;
+            bindings = <&kp SV_BACKSLASH>;
             key-positions = <26 14>;
         };
 
@@ -138,37 +140,37 @@
         };
 
         star {
-            bindings = <&kp STAR>;
+            bindings = <&kp SV_STAR>;
             key-positions = <8 20>;
         };
 
         slash {
-            bindings = <&kp SLASH>;
+            bindings = <&kp SV_SLASH>;
             key-positions = <32 20>;
         };
 
         plus {
-            bindings = <&kp PLUS>;
+            bindings = <&kp SV_PLUS>;
             key-positions = <7 19>;
         };
 
         minus {
-            bindings = <&kp KP_MINUS>;
+            bindings = <&kp SV_MINUS>;
             key-positions = <31 19>;
         };
 
         underscore {
-            bindings = <&kp UNDER>;
+            bindings = <&kp SV_UNDER>;
             key-positions = <30 18>;
         };
 
         leftbrack {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp SV_LEFT_BRACKET>;
             key-positions = <31 32>;
         };
 
         rightbrack {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp SV_RIGHT_BRACKET>;
             key-positions = <33 32>;
         };
 
@@ -198,10 +200,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB    &kp SV_Q  &kp SV_W  &kp SV_E     &kp SV_R  &kp SV_T        &kp SV_Y    &kp SV_U      &kp SV_I          &kp SV_O    &kp SV_P         &kp SV_A_RING
-&kp LSHFT  &kp SV_A  &kp SV_S  &kp SV_D     &kp SV_F  &kp SV_G        &kp SV_H    &kp SV_J      &kp SV_K          &kp SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
-&kp LCTRL  &kp SV_Z  &kp SV_X  &kp SV_C     &kp SV_V  &kp SV_B        &kp SV_N    &kp SV_M      &kp SV_COMMA      &kp SV_DOT  &kp SV_MINUS     &kp RSHFT
-                         &kp LGUI  &mo 1  &kp SV_SPACE    &kp RET  &lt 2 TAB  &kp RIGHT_ALT
+&kp TAB    &kp SV_Q        &kp SV_W          &kp SV_E          &kp SV_R       &kp SV_T        &kp SV_Y    &kp SV_U      &kp SV_I          &kp SV_O    &kp SV_P         &kp SV_A_RING
+&kp LSHFT  &hm LSHFT SV_A  &hm LCTRL SV_S    &hm LGUI SV_D     &hm LALT SV_F  &kp SV_G        &kp SV_H    &kp SV_J      &kp SV_K          &kp SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
+&kp LCTRL  &kp SV_Z        &kp SV_X          &kp SV_C          &kp SV_V       &kp SV_B        &kp SV_N    &kp SV_M      &kp SV_COMMA      &kp SV_DOT  &kp SV_MINUS     &kp RSHFT
+                         &kp LGUI  &mo 1  &kp SV_SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
             >;
         };
 
@@ -215,10 +217,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp SV_N1  &kp SV_N2    &kp SV_N3       &kp SV_N4           &kp SV_N5           &kp SV_N6   &kp SV_N7        &kp SV_N8        &kp SV_N9        &kp SV_N0  &kp BACKSPACE
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp SV_N0   &kp SV_N4  &kp SV_N5        &kp SV_N6  &kp SV_SEMI   &kp SV_COMMA
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp SV_N1  &kp SV_N2  &kp SV_N3  &trans  &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans        &trans
+&kp ESC     &kp SV_N1   &kp SV_N2      &kp SV_N3      &kp SV_N4            &kp SV_N5         &kp SV_N6   &kp SV_N7   &kp SV_N8   &kp SV_N9   &kp SV_N0      &kp BACKSPACE
+&caps_word  &kp HOME    &trans         &kp UP_ARROW   &browsertab          &kp PAGE_UP       &kp SV_N0   &kp SV_N4   &kp SV_N5   &kp SV_N6   &kp SV_PIPE    &kp DELETE
+&trans      &kp END     &kp LEFT       &kp DOWN       &kp RIGHT_ARROW      &kp PAGE_DOWN     &trans      &kp SV_N1   &kp SV_N2   &kp SV_N3   &trans         &trans
+                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans        &kp RIGHT_ALT
             >;
         };
 
@@ -232,10 +234,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
-&trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                  &kp LGUI        &trans           &kp SPACE    &kp RET    &trans     &trans
+&trans  &kp SV_EXCL  &kp SV_AT       &kp SV_HASH     &kp SV_DLLR      &kp SV_PRCNT    &kp SV_CARET    &kp SV_AMPS    &kp SV_ASTRK  &kp SV_LPAR  &kp SV_RPAR  &trans
+&trans  &trans       &trans          &kp UP_ARROW    &trans           &kp SV_GRAVE    &kp SV_MINUS    &kp SV_EQUAL   &kp SV_LBKT   &kp SV_RBKT  &kp SV_BSLH  &trans
+&trans  &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE       &kp SV_UNDER    &kp SV_PLUS    &kp SV_LBRC   &kp SV_RBRC  &kp SV_PIPE  &trans
+                                     &kp LGUI        &trans           &kp SPACE       &kp RET         &trans     &trans
             >;
         };
 
@@ -243,7 +245,7 @@
             display-name = "System";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &trans            &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &kp F11       &kp F12       &trans        &trans      &mkp LCLK         &trans  &trans  &trans  &trans  &trans       &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
                                     &trans        &trans      &trans            &trans  &trans  &trans
             >;
