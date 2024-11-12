@@ -6,6 +6,7 @@
 #define NAV 1
 #define SYM 2
 #define ADJ 3
+#define extra1 4
 
 / {
     behaviors {
