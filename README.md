@@ -3,7 +3,8 @@
 
 Want an easy way to customize the keymap?  I have a guide https://www.keyboardhoarders.com/post/1288093071901/zmk-change-keymap-walkthrough
 
-![corneetsycur](https://github.com/user-attachments/assets/8cc16bb4-9a6f-42fc-ad1b-47e0b2b6e515)
+
+![zmkmy_keymap (7)](https://github.com/user-attachments/assets/23712dff-27b2-407d-b222-d315543dbef9)
 
 
 
