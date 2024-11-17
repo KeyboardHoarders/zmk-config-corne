@@ -16,8 +16,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
@@ -218,9 +217,9 @@
 
             bindings = <
 &kp ESC     &kp SV_N1   &kp SV_N2      &kp SV_N3      &kp SV_N4            &kp SV_N5         &kp SV_N6   &kp SV_N7   &kp SV_N8   &kp SV_N9   &kp SV_N0      &kp BACKSPACE
-&caps_word  &kp HOME    &trans         &kp UP_ARROW   &browsertab          &kp PAGE_UP       &kp SV_N0   &kp SV_N4   &kp SV_N5   &kp SV_N6   &kp SV_PIPE    &kp DELETE
+&caps_word  &kp HOME    &kp SV_SQT     &kp UP_ARROW   &browsertab          &kp PAGE_UP       &kp SV_N0   &kp SV_N4   &kp SV_N5   &kp SV_N6   &kp SV_PIPE    &kp DELETE
 &trans      &kp END     &kp LEFT       &kp DOWN       &kp RIGHT_ARROW      &kp PAGE_DOWN     &trans      &kp SV_N1   &kp SV_N2   &kp SV_N3   &trans         &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans        &kp RIGHT_ALT
+                        &kp LGUI       &trans         &kp SPACE            &kp RET           &trans      &kp RIGHT_ALT
             >;
         };
 
@@ -234,26 +233,26 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp SV_EXCL  &kp SV_AT       &kp SV_HASH     &kp SV_DLLR      &kp SV_PRCNT    &kp SV_CARET    &kp SV_AMPS    &kp SV_ASTRK  &kp SV_LPAR  &kp SV_RPAR  &trans
-&trans  &trans       &trans          &kp UP_ARROW    &trans           &kp SV_GRAVE    &kp SV_MINUS    &kp SV_EQUAL   &kp SV_LBKT   &kp SV_RBKT  &kp SV_BSLH  &trans
-&trans  &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE       &kp SV_UNDER    &kp SV_PLUS    &kp SV_LBRC   &kp SV_RBRC  &kp SV_PIPE  &trans
-                                     &kp LGUI        &trans           &kp SPACE       &kp RET         &trans     &trans
+&trans  &kp SV_EXCL  &kp SV_AT       &kp SV_HASH     &kp SV_DLLR      &kp SV_PRCNT    &kp SV_AMPS     &kp SV_ASTRK   &kp SV_LPAR    &kp SV_RPAR    &kp SV_CARET   &kp BACKSPACE
+&trans  &trans       &kp SV_SQT      &kp UP_ARROW    &trans           &kp SV_GRAVE    &kp SV_PLUS     &kp SV_EQUAL   &kp SV_LBKT    &kp SV_RBKT    &kp SV_BSLH    &kp DELETE
+&trans  &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SV_TILDE    &kp SV_LT       &kp SV_GT      &kp SV_LBRC    &kp SV_RBRC    &kp SV_PIPE    &trans
+                                     &kp LGUI        &trans           &kp SPACE       &kp RET         &trans         &trans
             >;
         };
 
         ADJ {
             display-name = "System";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &mkp LCLK         &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4       &kp F5         &kp F6      &kp F7         &kp F8  &kp F9  &kp F10      &trans
+&trans  &kp F11       &kp F12       &trans        &trans       &mkp LCLK      &trans      &trans         &trans  &trans  &trans       &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR  &bt BT_CLR_ALL &trans  &trans  &bootloader  &trans
+                                    &trans        &trans       &trans         &trans      &trans         &trans
             >;
         };
     };
 
     conditional_layers {
-        compatible = "zmk,conditional-layers";
+        compatible = "zmk,conditional-layers";        
 
         l3 {
             if-layers = <1 2>;
