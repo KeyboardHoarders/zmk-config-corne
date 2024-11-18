@@ -10,8 +10,71 @@
 #define SYM 2
 #define ADJ 3
 
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5 // left-hand keys
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right-hand keys
+#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
+   
+//#define ZMK_BEHAVIOR_CORE_hold_tap        compatible = "zmk,behavior-hold-tap";        #binding-cells = <2>
+//#define ZMK_BEHAVIOR(name, type, ...) \
+//    / { \
+//        behaviors { \
+//            name: name { \
+//                ZMK_BEHAVIOR_CORE_ ## type; \
+//                __VA_ARGS__ \
+//            }; \
+//        }; \
+//    };
+//
+//#define ZMK_HOLD_TAP(name, ...) ZMK_BEHAVIOR(name, hold_tap, __VA_ARGS__)
+//
+//   /* left-hand HRMs */
+//   ZMK_HOLD_TAP(hml,
+//      flavor = "balanced";
+//      tapping-term-ms = <280>;
+//      quick-tap-ms = <175>;                // repeat on tap-into-hold
+//      require-prior-idle-ms = <150>;
+//      bindings = <&kp>, <&kp>;
+//      hold-trigger-key-positions = <KEYS_R THUMBS>;
+//      hold-trigger-on-release;             // delay positional check until key-release
+//   )
+//
+//   /* right-hand HRMs */
+//   ZMK_HOLD_TAP(hmr,
+//      flavor = "balanced";
+//      tapping-term-ms = <280>;
+//      quick-tap-ms = <175>;                // repeat on tap-into-hold
+//      require-prior-idle-ms = <150>;
+//      bindings = <&kp>, <&kp>;
+//      hold-trigger-key-positions = <KEYS_L THUMBS>;
+//      hold-trigger-on-release;             // delay positional check until key-release
+//   )
+//
 / {
+
     behaviors {
+        hml: home_row_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;             // delay positional check until key-release
+        };
+        hmr: home_row_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;             // delay positional check until key-release
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -200,7 +263,7 @@
 
             bindings = <
 &kp TAB    &kp SV_Q        &kp SV_W          &kp SV_E          &kp SV_R       &kp SV_T        &kp SV_Y    &kp SV_U      &kp SV_I          &kp SV_O    &kp SV_P         &kp SV_A_RING
-&kp LSHFT  &hm LSHFT SV_A  &hm LCTRL SV_S    &hm LGUI SV_D     &hm LALT SV_F  &kp SV_G        &kp SV_H    &kp SV_J      &kp SV_K          &kp SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
+&kp LSHFT  &hml LSHFT SV_A  &hml LCTRL SV_S    &hml LGUI SV_D     &hml LALT SV_F  &kp SV_G        &kp SV_H    &hmr RALT SV_J      &hmr RCTRL SV_K          &hmr RSHFT SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
 &kp LCTRL  &kp SV_Z        &kp SV_X          &kp SV_C          &kp SV_V       &kp SV_B        &kp SV_N    &kp SV_M      &kp SV_COMMA      &kp SV_DOT  &kp SV_MINUS     &kp RSHFT
                          &kp LGUI  &mo 1  &kp SV_SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
             >;
