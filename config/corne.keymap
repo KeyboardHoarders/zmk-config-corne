@@ -69,19 +69,6 @@
                 <&kp LCTRL>;
         };
 
-        adob: adob {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LS(RIGHT_ALT)>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_2>,
-                <&macro_release>,
-                <&kp RIGHT_ALT>;
-
-            label = "ADOB";
-        };
     };
 
     combos {
