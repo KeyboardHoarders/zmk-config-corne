@@ -322,9 +322,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB    &kp SV_Q        &kp SV_W          &kp SV_E          &kp SV_R       &kp SV_T        &kp SV_Y    &kp SV_U      &kp SV_I          &kp SV_O    &kp SV_P         &kp SV_A_RING
-&kp LSHFT  &hml LSHFT SV_A  &hml LCTRL SV_S    &hml LGUI SV_D     &hml LALT SV_F  &kp SV_G        &kp SV_H    &hmr RALT SV_J      &hmr RCTRL SV_K          &hmr RSHFT SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
-&kp LCTRL  &kp SV_Z        &kp SV_X          &kp SV_C          &kp SV_V       &kp SV_B        &kp SV_N    &kp SV_M      &kp SV_COMMA      &kp SV_DOT  &kp SV_MINUS     &kp RSHFT
+&kp TAB    &kp SV_Q         &kp SV_W           &kp SV_E          &kp SV_R        &kp SV_T        &kp SV_Y    &kp SV_U        &kp SV_I          &kp SV_O         &kp SV_P         &kp SV_A_RING
+&kp LSHFT  &hml LSHFT SV_A  &hml LCTRL SV_S    &hml LGUI SV_D    &hml LALT SV_F  &kp SV_G        &kp SV_H    &hmr RALT SV_J  &hmr RCTRL SV_K   &hmr RSHFT SV_L  &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
+&kp LCTRL  &kp SV_Z         &kp SV_X           &kp SV_C          &kp SV_V        &kp SV_B        &kp SV_N    &kp SV_M        &kp SV_COMMA      &kp SV_DOT       &kp SV_MINUS     &kp RSHFT
                          &kp LGUI  &mo 1  &kp SV_SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
             >;
         };
@@ -356,8 +356,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp SV_EXCL  &kp SV_AT       &kp SV_HASH     &kp SV_DLLR      &kp SV_PRCNT    &kp SV_AMPS     &kp SV_ASTRK   &kp SV_LPAR    &kp SV_RPAR    &kp SV_CARET   &kp BACKSPACE
-&trans  &trans       &kp SV_SQT      &kp UP_ARROW    &trans           &kp SV_GRAVE    &kp SV_PLUS     &kp SV_EQUAL   &kp SV_LBKT    &kp SV_RBKT    &kp SV_BSLH    &kp DELETE
+&kp SV_FRAC_1_2  &kp SV_EXCL  &kp SV_AT       &kp SV_HASH     &kp SV_DLLR      &kp SV_PRCNT    &kp SV_AMPS     &kp SV_ASTRK   &kp SV_LPAR    &kp SV_RPAR    &kp SV_CARET   &kp BACKSPACE
+&trans  &trans       &kp SV_SQT      &kp UP_ARROW    &kp SV_ACUTE     &kp SV_GRAVE    &kp SV_PLUS     &kp SV_EQUAL   &kp SV_LBKT    &kp SV_RBKT    &kp SV_BSLH    &kp DELETE
 &trans  &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SV_TILDE    &kp SV_LT       &kp SV_GT      &kp SV_LBRC    &kp SV_RBRC    &kp SV_PIPE    &trans
                                      &kp LGUI        &trans           &kp SPACE       &kp RET         &trans         &trans
             >;
@@ -366,7 +366,7 @@
         ADJ {
             display-name = "System";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4       &kp F5         &kp F6      &kp F7         &kp F8  &kp F9  &kp F10      &trans
+&kp SV_SECT  &kp F1        &kp F2        &kp F3        &kp F4       &kp F5         &kp F6      &kp F7         &kp F8  &kp F9  &kp F10      &trans
 &trans  &kp F11       &kp F12       &trans        &trans       &mkp LCLK      &trans      &trans         &trans  &trans  &trans       &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR  &bt BT_CLR_ALL &trans  &trans  &bootloader  &trans
                                     &trans        &trans       &trans         &trans      &trans         &trans
