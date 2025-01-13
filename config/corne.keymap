@@ -322,10 +322,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB    &kp SV_Q         &kp SV_W           &kp SV_E          &kp SV_R        &kp SV_T        &kp SV_Y    &kp SV_U        &kp SV_I          &kp SV_O         &kp SV_P         &kp SV_A_RING
-&kp LSHFT  &hml LSHFT SV_A  &hml LCTRL SV_S    &hml LGUI SV_D    &hml LALT SV_F  &kp SV_G        &kp SV_H    &hmr RALT SV_J  &hmr RCTRL SV_K   &hmr RSHFT SV_L  &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
-&kp LCTRL  &kp SV_Z         &kp SV_X           &kp SV_C          &kp SV_V        &kp SV_B        &kp SV_N    &kp SV_M        &kp SV_COMMA      &kp SV_DOT       &kp SV_MINUS     &kp RSHFT
-                         &kp LGUI  &mo 1  &kp SV_SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
+&kp TAB    &kp SV_Q         &kp SV_W           &kp SV_E          &kp SV_R        &kp SV_T        &kp SV_Y    &kp SV_U        &kp SV_I          &kp SV_O         &kp SV_P                &kp SV_A_RING
+&kp LSHFT  &hml LSHFT SV_A  &hml LCTRL SV_S    &hml LGUI SV_D    &hml LALT SV_F  &kp SV_G        &kp SV_H    &hmr RALT SV_J  &hmr RGUI SV_K    &hmr RCTRL SV_L  &hmr RSHFT SV_O_UMLAUT  &kp SV_A_UMLAUT
+&kp LCTRL  &kp SV_Z         &kp SV_X           &kp SV_C          &kp SV_V        &kp SV_B        &kp SV_N    &kp SV_M        &kp SV_COMMA      &kp SV_DOT       &kp SV_MINUS            &kp RSHFT
+                         &kp LGUI  &lt 1 RGUI  &kp SV_SPACE      &kp RET  &lt 2 TAB  &kp LEFT_ALT
             >;
         };
 
@@ -341,7 +341,7 @@
             bindings = <
 &kp ESC     &kp SV_N1   &kp SV_N2      &kp SV_N3      &kp SV_N4            &kp SV_N5         &kp SV_N6   &kp SV_N7   &kp SV_N8   &kp SV_N9   &kp SV_N0      &kp BACKSPACE
 &caps_word  &kp HOME    &kp SV_SQT     &kp UP_ARROW   &browsertab          &kp PAGE_UP       &kp SV_N0   &kp SV_N4   &kp SV_N5   &kp SV_N6   &kp SV_PIPE    &kp DELETE
-&trans      &kp END     &kp LEFT       &kp DOWN       &kp RIGHT_ARROW      &kp PAGE_DOWN     &trans      &kp SV_N1   &kp SV_N2   &kp SV_N3   &trans         &trans
+&trans      &kp END     &kp LEFT       &kp DOWN       &kp RIGHT_ARROW      &kp PAGE_DOWN     &trans      &kp SV_N1   &kp SV_N2   &kp SV_N3   &kp SV_FSLH    &trans
                         &kp LGUI       &trans         &kp SPACE            &kp RET           &trans      &kp RIGHT_ALT
             >;
         };
@@ -357,8 +357,8 @@
 
             bindings = <
 &kp SV_FRAC_1_2  &kp SV_EXCL  &kp SV_AT       &kp SV_HASH     &kp SV_DLLR      &kp SV_PRCNT    &kp SV_AMPS     &kp SV_ASTRK   &kp SV_LPAR    &kp SV_RPAR    &kp SV_CARET   &kp BACKSPACE
-&trans  &trans       &kp SV_SQT      &kp UP_ARROW    &kp SV_ACUTE     &kp SV_GRAVE    &kp SV_PLUS     &kp SV_EQUAL   &kp SV_LBKT    &kp SV_RBKT    &kp SV_BSLH    &kp DELETE
-&trans  &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SV_TILDE    &kp SV_LT       &kp SV_GT      &kp SV_LBRC    &kp SV_RBRC    &kp SV_PIPE    &trans
+&trans  &trans       &kp SV_SQT      &kp UP_ARROW    &kp SV_ACUTE     &kp SV_GRAVE    &kp SV_PLUS     &kp SV_EQUAL   &kp SV_LBKT    &kp SV_RBKT    &kp SV_PIPE    &kp DELETE
+&trans  &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SV_TILDE    &kp SV_LT       &kp SV_GT      &kp SV_LBRC    &kp SV_RBRC    &kp SV_BSLH    &trans
                                      &kp LGUI        &trans           &kp SPACE       &kp RET         &trans         &trans
             >;
         };
