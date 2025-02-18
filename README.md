@@ -1,3 +1,4 @@
+# My shops keyboard-hoarders.com // keyboardhoarders.etsy.com
 # Now change the keymap using ZMK.studio 
 1. Go to zmk.studio
 2. plug in left half of the keyboard via USB to computer
