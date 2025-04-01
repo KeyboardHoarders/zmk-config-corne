@@ -1,0 +1,8 @@
+/ {
+    behaviors {
+        custom_mt: mod_tap_custom {
+            compatible = "zmk,behavior-hold-tap";
+            tapping-term-ms = <450>;  /* Set delay to 300ms (adjust as desired) */
+        };
+    };
+};
