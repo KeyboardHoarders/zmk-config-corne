@@ -1,257 +1,56 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-
-#define DEF 0
-#define NAV 1
-#define SYM 2
-#define ADJ 3
-#define EXTRA 4
-
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+  keymap {
+    compatible = "zmk,keymap";
 
-            quick-tap-ms = <180>;
-            global-quick-tap;
-        };
-
-        para: para {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PARA";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
-
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
-
-        paraless: paraless {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARALESS";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        paragreat: paragreat {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARAGREAT";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
+    Alpha {
+      display-name = "Alpha";
+      bindings = <
+        &kp ESCAPE    &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp DELETE
+        &kp TAB       &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp F8
+        &kp LEFT_SHIFT &mt LCTRL Z &kp X  &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &kp QUOTE
+                        &kp LEFT_ALT &kp LEFT_GUI &kp SPACE &kp ENTER &kp RIGHT_GUI &mo SYS
+      >;
     };
 
-    macros {
-        browsertab: browsertab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-
+    SYS {
+      display-name = "System";
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp C_VOL_DOWN &kp C_VOL_UP &kp C_MUTE
+        &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &studio_unlock &trans &trans &trans &trans &trans &trans &trans &trans
+                       &trans &trans &trans &kp studio_unlock &trans &trans
+      >;
     };
+  };
 
-    combos {
-        compatible = "zmk,combos";
+  combos {
+    compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <13 29>;
-        };
+    combo_left_lh { bindings = <&kp LEFT>; key-positions = <13 14>; timeout-ms = <40>; slow-release; };
+    combo_right_lh { bindings = <&kp RIGHT>; key-positions = <15 14>; timeout-ms = <40>; slow-release; };
+    combo_up_lh { bindings = <&kp UP>; key-positions = <15 12>; timeout-ms = <40>; slow-release; };
+    combo_down_lh { bindings = <&kp DOWN>; key-positions = <20 14>; timeout-ms = <40>; slow-release; };
+    combo_left_rh { bindings = <&kp LEFT>; key-positions = <23 24>; timeout-ms = <40>; slow-release; };
+    combo_right_rh { bindings = <&kp RIGHT>; key-positions = <25 24>; timeout-ms = <40>; slow-release; };
+    combo_up_rh { bindings = <&kp UP>; key-positions = <23 22>; timeout-ms = <40>; slow-release; };
+    combo_down_rh { bindings = <&kp DOWN>; key-positions = <26 24>; timeout-ms = <40>; slow-release; };
 
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 21>;
-        };
+    combo_backspace { bindings = <&kp BACKSPACE>; key-positions = <16 15>; timeout-ms = <40>; slow-release; };
+    combo_return { bindings = <&kp RETURN>; key-positions = <20 21>; timeout-ms = <40>; slow-release; };
 
-        perc {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
+    combo_num_1 { bindings = <&kp N1>; key-positions = <0 1>; timeout-ms = <40>; slow-release; };
+    combo_num_2 { bindings = <&kp N2>; key-positions = <1 2>; timeout-ms = <40>; slow-release; };
+    combo_num_3 { bindings = <&kp N3>; key-positions = <2 3>; timeout-ms = <40>; slow-release; };
+    combo_num_4 { bindings = <&kp N4>; key-positions = <4 3>; timeout-ms = <40>; slow-release; };
+    combo_num_5 { bindings = <&kp N5>; key-positions = <4 5>; timeout-ms = <40>; slow-release; };
+    combo_num_6 { bindings = <&kp N6>; key-positions = <6 7>; timeout-ms = <40>; slow-release; };
+    combo_num_7 { bindings = <&kp N7>; key-positions = <7 8>; timeout-ms = <40>; slow-release; };
+    combo_num_8 { bindings = <&kp N8>; key-positions = <8 9>; timeout-ms = <40>; slow-release; };
+    combo_num_9 { bindings = <&kp N9>; key-positions = <9 10>; timeout-ms = <40>; slow-release; };
+    combo_num_0 { bindings = <&kp N0>; key-positions = <11 10>; timeout-ms = <40>; slow-release; };
+  };
 
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <28 16>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        pound {
-            bindings = <&kp POUND>;
-            key-positions = <3 15>;
-        };
-
-        at {
-            bindings = <&kp AT>;
-            key-positions = <2 14>;
-        };
-
-        backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <26 14>;
-        };
-
-        copy {
-            bindings = <&kp K_COPY>;
-            key-positions = <28 27>;
-        };
-
-        paste {
-            bindings = <&kp K_PASTE>;
-            key-positions = <26 27>;
-        };
-
-        star {
-            bindings = <&kp STAR>;
-            key-positions = <8 20>;
-        };
-
-        slash {
-            bindings = <&kp SLASH>;
-            key-positions = <32 20>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <7 19>;
-        };
-
-        minus {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <31 19>;
-        };
-
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <30 18>;
-        };
-
-        leftbrack {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
-        };
-
-        rightbrack {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <33 32>;
-        };
-
-        para-less {
-            bindings = <&paraless>;
-            key-positions = <20 19>;
-        };
-
-        para-great {
-            bindings = <&paragreat>;
-            key-positions = <20 21>;
-        };
-    };
-
-    //
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        DEF {
-            display-name = "Base";
-
-            // -----------------------------------------------------------------------------------------
-            // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-            // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-            // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
-
-            bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
-            >;
-        };
-
-        NAV {
-            display-name = "NavNum";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
-
-            bindings = <
-&trans  &kp N1  &kp N2    &kp N3       &kp N4           &kp N5           &kp N6   &kp N7        &kp N8        &kp N9        &kp N0  &trans
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp N0   &kp N4  &kp N5        &kp N6  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans        &trans
-            >;
-        };
-
-        SYM {
-            display-name = "Symbols";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
-&trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                  &kp LGUI        &trans           &kp SPACE    &kp RET    &trans     &trans
-            >;
-        };
-
-        ADJ {
-            display-name = "System";
-            bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock            &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
-            >;
-        };
-        EXTRA {
-            display-name = "extra";
-            bindings = <
-&trans  &trans        &trans        &trans        &trans      &trans            &trans  &trans  &trans  &trans  &trans      &trans
-&trans  &trans       &trans       &trans        &trans      &trans            &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
-            >;
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        l3 {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+  };
 };
