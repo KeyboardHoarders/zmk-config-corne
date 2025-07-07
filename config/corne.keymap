@@ -326,7 +326,7 @@
 &kp TAB    &kp SV_Q         &kp SV_W           &kp SV_E          &kp SV_R        &kp SV_T        &kp SV_Y    &kp SV_U        &kp SV_I          &kp SV_O         &kp SV_P                &kp SV_A_RING
 &kp LSHFT  &hml LSHFT SV_A  &hml LCTRL SV_S    &hml LGUI SV_D    &hml LALT SV_F  &kp SV_G        &kp SV_H    &hmr RALT SV_J  &hmr K_CMENU SV_K    &hmr RCTRL SV_L  &hmr RSHFT SV_O_UMLAUT  &kp SV_A_UMLAUT
 &kp LCTRL  &kp SV_Z         &kp SV_X           &kp SV_C          &kp SV_V        &kp SV_B        &kp SV_N    &kp SV_M        &kp SV_COMMA      &kp SV_DOT       &kp SV_MINUS            &kp RSHFT
-                         &kp LGUI  &lt 1 K_CMENU  &kp SV_SPACE      &kp RET  &lt 2 TAB  &kp LEFT_ALT
+                         &kp LGUI  &kp 1  &kp SV_SPACE      &kp RET  &lt 2 TAB  &kp LEFT_ALT
             >;
         };
 
