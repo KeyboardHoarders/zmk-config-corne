@@ -187,16 +187,16 @@
 &kp TAB            &kp Q             &kp W           &kp E               &kp R             &kp T      &kp Y         &kp U              &kp I                &kp O           &kp P                &kp BACKSLASH
 &hm CAPS ESC       &hm RIGHT_META A  &hm S LEFT_ALT  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G      &kp H         &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm LEFT_ALT L  &hm RIGHT_META SEMI  &kp SQT
 &kp LA(LS(LCTRL))  &kp Z             &kp X           &kp C               &kp V             &kp B      &kp N         &kp M              &kp COMMA            &kp DOT         &kp FSLH             &caps_word
-                                                     &kp LGUI            &lt 3 BACKSPACE   &kp DEL    &lt 2 RETURN  &lt 1 SPACE        &kp LEFT_ALT
+                                                     &none               &lt 3 BACKSPACE   &kp DEL    &lt 2 RETURN  &lt 1 SPACE        &none
             >;
         };
 
         SYM+NUM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp F1        &kp F2                       &kp F3                         &kp F4          &kp F5          &kp F6        &kp F7          &kp F8           &kp F9        &kp F10       &kp F11
+&trans  &kp NUMBER_1  &kp NUMBER_2                 &kp NUMBER_3                   &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0  &kp F12
+&trans  &none         &hm LEFT_BRACE LEFT_BRACKET  &hm RIGHT_BRACE RIGHT_BRACKET  &none           &none           &sl 1         &hm PLUS EQUAL  &hm TILDE GRAVE  &trans        &trans        &none
+                                                   &trans                         &kp LEFT_SHIFT  &trans          &trans        &trans          &trans
             >;
         };
 
