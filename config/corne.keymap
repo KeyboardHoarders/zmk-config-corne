@@ -202,10 +202,10 @@
 
         BasicNav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans          &kp K_VOLUME_DOWN  &kp K_VOLUME_UP   &kp K_MUTE      &kp C_BRIGHTNESS_INC    &trans             &trans          &trans        &trans           &trans  &bootloader
+&trans  &kp RIGHT_META  &kp LEFT_ALT       &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp C_BRIGHTNESS_DEC    &kp LEFT_ARROW     &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&sl 2   &trans          &trans             &trans            &trans          &trans                  &hm LS(HOME) HOME  &kp PAGE_DOWN   &kp PAGE_UP   &hm LS(END) END  &trans  &trans
+                                           &trans            &trans          &trans                  &trans             &trans          &trans
             >;
         };
 
