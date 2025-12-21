@@ -9,7 +9,7 @@
 ![il_fullxfull 6886024620_quu0 jpg](https://github.com/user-attachments/assets/8c71c6dc-2ea5-4970-923f-6727532cd4f8)
 
 
-Want an easy way to customize the keymap?  I have a guide https://www.keyboardhoarders.com/post/1288093071901/zmk-change-keymap-walkthrough
+Want an easy way to customize the keymap?  I have a guide [https://www.keyboardhoarders.com/post/1288093071901/zmk-change-keymap-walkthrough](https://keyboard-hoarders.com/pages/guides-1)
 
 <img width="900" height="1709" alt="my_keymap-3" src="https://github.com/user-attachments/assets/e7869ef1-371d-4beb-997a-2e57da00d3d9" />
 
