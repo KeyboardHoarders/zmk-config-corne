@@ -15,7 +15,8 @@ Want an easy way to customize the keymap?  I have a guide [https://www.keyboardh
 
 #   Combo diagram.
 
-<img width="915" height="3747" alt="my_keymap-4" src="https://github.com/user-attachments/assets/94f55fab-344c-4337-8b32-51037acb149c" />
+
+<img width="915" height="2294" alt="combos" src="https://github.com/user-attachments/assets/0c39e4ee-ecda-4e94-934f-a7b5405323d7" />
 
 
 
