@@ -13,34 +13,29 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <180>;
-            global-quick-tap;
+            require-prior-idle-ms = <120>; /* tune to taste */
         };
 
         para: para {
             compatible = "zmk,behavior-tap-dance";
-            label = "PARA";
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
         };
 
         caps: caps {
             compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
             #binding-cells = <0>;
             continue-list = <MINUS BACKSPACE>;
         };
 
         paraless: paraless {
             compatible = "zmk,behavior-mod-morph";
-            label = "PARALESS";
             bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
 
             #binding-cells = <0>;
@@ -49,7 +44,6 @@
 
         paragreat: paragreat {
             compatible = "zmk,behavior-mod-morph";
-            label = "PARAGREAT";
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
 
             #binding-cells = <0>;
@@ -88,86 +82,91 @@
         perc {
             bindings = <&kp PERCENT>;
             key-positions = <5 17>;
+            layers = <0>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <28 16>;
+            layers = <0>;
         };
 
         dollar {
             bindings = <&kp DOLLAR>;
             key-positions = <4 16>;
+            layers = <0>;
         };
 
         pound {
             bindings = <&kp POUND>;
             key-positions = <3 15>;
+            layers = <0>;
         };
 
         at {
             bindings = <&kp AT>;
             key-positions = <2 14>;
+            layers = <0>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <26 14>;
-        };
-
-        copy {
-            bindings = <&kp K_COPY>;
-            key-positions = <28 27>;
-        };
-
-        paste {
-            bindings = <&kp K_PASTE>;
-            key-positions = <26 27>;
+            layers = <0>;
         };
 
         star {
             bindings = <&kp STAR>;
             key-positions = <8 20>;
+            layers = <0>;
         };
 
         slash {
             bindings = <&kp SLASH>;
             key-positions = <32 20>;
+            layers = <0>;
         };
 
         plus {
             bindings = <&kp PLUS>;
             key-positions = <7 19>;
+            layers = <0>;
         };
 
         minus {
             bindings = <&kp KP_MINUS>;
             key-positions = <31 19>;
+            layers = <0>;
         };
 
         underscore {
             bindings = <&kp UNDER>;
             key-positions = <30 18>;
+            layers = <0>;
         };
 
         leftbrack {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <31 32>;
+            layers = <0>;
         };
 
         rightbrack {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <33 32>;
+            layers = <0>;
         };
 
         para-less {
             bindings = <&paraless>;
             key-positions = <20 19>;
+            layers = <0>;
         };
 
         para-great {
             bindings = <&paragreat>;
             key-positions = <20 21>;
+            layers = <0>;
         };
     };
 
@@ -188,7 +187,7 @@
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
 &kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &mo 4
                          &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
             >;
         };
@@ -206,7 +205,7 @@
 &trans  &kp N1  &kp N2    &kp N3       &kp N4           &kp N5           &kp N6   &kp N7        &kp N8        &kp N9        &kp N0  &trans
 &caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp N0   &kp N4  &kp N5        &kp N6  &trans  &trans
 &trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans        &trans
+                          &kp LGUI      &trans           &kp SPACE        &kp RET  &mo 3        &trans
             >;
         };
 
@@ -223,7 +222,7 @@
 &trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
 &trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
 &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                  &kp LGUI        &trans           &kp SPACE    &kp RET    &trans     &trans
+                                  &kp LGUI        &mo 3           &kp SPACE    &kp RET    &trans     &trans
             >;
         };
 
@@ -239,20 +238,13 @@
         EXTRA {
                 display-name = "Extra";
             bindings = <
-&trans  &trans       &trans         &mmv MOVE_UP       &trans      &msc SCRL_UP    &trans  &trans  &trans  &trans  &trans      &trans
-&trans  &trans       &mmv MOVE_LEFT &mmv MOVE_DOWN     &mmv MOVE_RIGHT   &msc SCRL_DOWN            &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans       &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans         &trans          &trans      &msc SCRL_UP    &trans  &trans  &trans  &trans  &trans      &trans
+&trans  &trans       &trans        &mmv MOVE_UP      &trans   &msc SCRL_DOWN            &trans  &mkp LCLK  &mkp RCLK  &trans  &trans       &trans
+&trans  &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                      &trans        &trans      &trans            &trans  &trans  &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        l3 {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
 };
+    
