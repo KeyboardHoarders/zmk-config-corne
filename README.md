@@ -1,3 +1,4 @@
+# Currently broken will fix with new repo today 2/21/26
 # My shops https://keyboard-hoarders.com // https://keyboardhoarders.etsy.com
 # Now change the keymap using ZMK.studio 
 1. Go to zmk.studio
